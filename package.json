@@ -1,0 +1,29 @@
+{
+  "name": "paypal_sandbox",
+  "version": "1.0.0",
+  "description": "Paypal sandbox API implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bao8816/paypal_sandbox.git"
+  },
+  "keywords": [
+    "paypal",
+    "paypal_sandbox",
+    "API",
+    "E-payment",
+    "payment"
+  ],
+  "author": "Le Thai Phuc Bao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bao8816/paypal_sandbox/issues"
+  },
+  "homepage": "https://github.com/bao8816/paypal_sandbox#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
