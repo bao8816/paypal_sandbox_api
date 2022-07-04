@@ -1,19 +1,22 @@
-{{#each items}}
-<div class="item">
-    <div class="item-name">
-        {{this.name}}
-    </div>
-    
-    <div class="item-price">
-        {{this.price}}$
-    </div>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        </tr>
+    </thead>
 
-    <div class="item-quantity">
-        {{this.quantity}}
-    </div>
-</div>
-{{/each}}
-
+    <tbody>
+        {{#each items}}
+        <tr>
+            <td class="item-name">{{this.name}}</td>
+            <td class="item-price">{{this.price}}$</td>
+            <td class="item-quantity">{{this.quantity}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
 <form action="/pay" method="post">
-    <input type="submit" value="BUY">
+    <input class="btn btn-outline-secondary" type="submit" value="BUY">
 </form>
