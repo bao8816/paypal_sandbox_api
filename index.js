@@ -7,6 +7,8 @@ require('dotenv').config()
 
 const app = express()
 const port = process.env.PORT || 3000
+const successURL = process.env.SUCCESS_URL || "http://localhost:3000/success"
+const cancelURL = process.env.CANCEL_URL || "http://localhost:3000/cancel"
 
 // Configure the paypal environment
 paypal.configure({
@@ -56,8 +58,8 @@ app.post('/pay', (req, res) => {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/success",
-            "cancel_url": "http://localhost:3000/cancel"
+            "return_url": successURL,
+            "cancel_url": cancelURL
         },
         "transactions": [{
             "item_list": {
